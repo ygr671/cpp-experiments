@@ -1,0 +1,12 @@
+# Ignore les répertoires de construction
+/build/*
+
+# Ignore les fichiers temporaires de l'éditeur de texte (par exemple Vim, Emacs)
+*~
+*.swp
+/.cache/*
+
+CMakeCache.txt
+CMakeFiles/
+Makefile
+
