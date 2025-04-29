@@ -11,14 +11,28 @@
  * - Create a phone number struct : NOT DONE
  */
 
-namespace psn {
-enum class Gender { Male, Female, Other };
-enum class MaritalStatus { Married, Divorced, Single, Widowed };
-struct PhoneNumber {
+namespace psn
+{
+enum class Gender
+{
+  Male,
+  Female,
+  Other
+};
+enum class MaritalStatus
+{
+  Married,
+  Divorced,
+  Single,
+  Widowed
+};
+struct PhoneNumber
+{
   int
 }
 
-class Person {
+class Person
+{
 private:
   static int m_n_id;
   const int m_id;

@@ -1,7 +1,8 @@
 #include "Person.hpp"
 #include <iostream>
 
-int main() {
+int main()
+{
   auto psn1 = psn::Person("John", "Doe", 20, "john.doe@example.com",
                           psn::Gender::Male, psn::MaritalStatus::Single,
                           "Businessman", "Exmample person.");
