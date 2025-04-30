@@ -1,8 +1,19 @@
-#/bin/bash
+#!/bin/bash
 # Formatting source files with clang
 
-# TODO:
-# - Write it properly and return user understandeable "done" or "error : {error}"
+# Get the list of source files
+files=$(git ls-files '*.cpp' '*.hpp')
 
-git ls-files '*.cpp' '*.hpp' | xargs clang-format -i
+# Check if any files were found
+if [ -z "$files" ]; then
+  echo "Error: No source files (*.cpp, *.hpp) found to format."
+  exit 1
+fi
 
+# Run clang-format and capture any errors
+if echo "$files" | xargs clang-format -i; then
+  echo "Done: Source files formatted successfully."
+else
+  echo "Error: An issue occurred while formatting files. Please check your clang installation and file permissions."
+  exit 1
+fi
