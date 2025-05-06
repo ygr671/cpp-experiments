@@ -26,10 +26,10 @@ enum class MaritalStatus
   Single,
   Widowed
 };
-struct PhoneNumber
-{
-  int
-}
+// struct PhoneNumber
+// {
+//   int
+// }
 
 class Person
 {

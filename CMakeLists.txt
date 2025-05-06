@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.10)
+project(cpp_experiments)
+
+file(GLOB children RELATIVE "${CMAKE_SOURCE_DIR}/projects" "${CMAKE_SOURCE_DIR}/projects/*")
+foreach(child ${children})
+    if(IS_DIRECTORY "${CMAKE_SOURCE_DIR}/projects/${child}")
+        if(EXISTS "${CMAKE_SOURCE_DIR}/projects/${child}/CMakeLists.txt")
+            message(STATUS "Ajout du sous-projet: ${child}")
+            add_subdirectory("projects/${child}")
+        endif()
+    endif()
+endforeach()
